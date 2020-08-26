@@ -25,6 +25,11 @@
     "url": "https://github.com/tsukuba-shinkan/shinkan-web-api/issues"
   },
   "homepage": "https://github.com/tsukuba-shinkan/shinkan-web-api#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^3.10.1",
     "@typescript-eslint/parser": "^3.10.1",
@@ -32,6 +37,8 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.13",
     "prettier": "^2.1.1",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.2"
