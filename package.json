@@ -1,0 +1,22 @@
+{
+  "name": "@tsukuba-shinkan/shinkan-api",
+  "version": "0.0.0",
+  "description": "Server-side API for Shinkan Web, University of Tsukuba",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsukuba-shinkan/shinkan-web-api.git"
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "Kazumi Inada <hello@nandenjin.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tsukuba-shinkan/shinkan-web-api/issues"
+  },
+  "homepage": "https://github.com/tsukuba-shinkan/shinkan-web-api#readme"
+}
