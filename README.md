@@ -1,4 +1,4 @@
-# tsukuba-shinkan/shinkan-web-api
+# @tsukuba-shinkan/shinkan-web-api
 
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/tsukuba-shinkan/shinkan-web-api/CI?label=CI&style=flat-square)](https://github.com/tsukuba-shinkan/shinkan-web-api/actions)
 [![Codecov](https://img.shields.io/codecov/c/gh/tsukuba-shinkan/shinkan-web-api?style=flat-square)](https://codecov.io/gh/tsukuba-shinkan/shinkan-web-api)
