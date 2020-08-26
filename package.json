@@ -3,8 +3,12 @@
   "version": "0.0.0",
   "description": "Server-side API for Shinkan Web, University of Tsukuba",
   "main": "dist/index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "build": "tsc",
+    "dev": "ts-node src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -18,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/tsukuba-shinkan/shinkan-web-api/issues"
   },
-  "homepage": "https://github.com/tsukuba-shinkan/shinkan-web-api#readme"
+  "homepage": "https://github.com/tsukuba-shinkan/shinkan-web-api#readme",
+  "devDependencies": {
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
+  }
 }
