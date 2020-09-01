@@ -5,7 +5,7 @@
 [![Dependencies](https://img.shields.io/david/tsukuba-shinkan/shinkan-web-api?style=flat-square)](https://david-dm.org/tsukuba-shinkan/shinkan-web-api)
 [![devDependencies](https://img.shields.io/david/dev/tsukuba-shinkan/shinkan-web-api?style=flat-square)](https://david-dm.org/tsukuba-shinkan/shinkan-web-api?type=dev)
 [![License](https://img.shields.io/github/license/tsukuba-shinkan/shinkan-web-api?style=flat-square)](/LICENSE)
-[![Imagine the feature](https://img.shields.io/badge/Imagine%20the-feature-%230bf?style=flat-square)](https://github.com/topics/imagine-the-future)
+[![Imagine the future](https://img.shields.io/badge/Imagine%20the-future-%230bf?style=flat-square)](https://github.com/topics/imagine-the-future)
 
 筑波大学 新歓WebのAPIサーバ
 
