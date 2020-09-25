@@ -80,7 +80,7 @@ CREATE TABLE `organization_members` (
 
 CREATE TABLE `organization_member_invitations` (
   `invitation_id` int(32) NOT NULL,
-  `mail` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `organization_id` int(32) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
