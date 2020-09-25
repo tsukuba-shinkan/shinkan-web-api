@@ -36,7 +36,7 @@ CREATE TABLE `organizations` (
 
 CREATE TABLE `organization_contents` (
   `organization_id` int(32) NOT NULL,
-  `activity_introduction` mediumtext NOT NULL,
+  `activity_introduction` mediumtext DEFAULT NULL,
   `website` varchar(255) DEFAULT NULL,
   `twitter` varchar(255) DEFAULT NULL,
   `instagram` varchar(255) DEFAULT NULL,
