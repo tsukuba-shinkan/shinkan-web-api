@@ -15,7 +15,7 @@
 
 | introduction_id  | organization_id                            | title                      | activity_introduction | website      | twitter                 | instagram    | status                                                       | created_at                                     | updated_at                                                   |
 | ---------------- | ------------------------------------------ | -------------------------- | --------------------- | ------------ | ----------------------- | ------------ | ------------------------------------------------------------ | ---------------------------------------------- | ------------------------------------------------------------ |
-| int(32) NOT NULL | int(32) NOT NULL                           | varchar(64) NOT NULL       | mediamtext            | varchar(255) | varchar(255)            | varchar(255) | enum('draft', 'submitted', 'rejected',  'published') NOT NULL DEFAULT 'draft' | timestamp NOT NULL DEFAULT current_timestamp() | timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp() |
+| int(32) NOT NULL | int(32) NOT NULL                           | varchar(64)                | mediamtext            | varchar(255) | varchar(255)            | varchar(255) | enum('draft', 'submitted', 'rejected',  'published') NOT NULL DEFAULT 'draft' | timestamp NOT NULL DEFAULT current_timestamp() | timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp() |
 | 紹介文等ID       | 団体ID<br>（既存システムで付与済みのもの） | キャッチコピー（20字以内） | 活動紹介              | WebサイトURL | Twitterスクリーンネーム | Instagram ID | 公開状態                                                     | データ入力日時                                 | データ更新日時                                               |
 
 # organization_introductions_images
@@ -47,9 +47,9 @@
 
 # reviews
 
-| review_id        | content_type                              | content_id                        | result                                 | reason                             |
-| ---------------- | ----------------------------------------- | --------------------------------- | -------------------------------------- | ---------------------------------- |
-| int(32) NOT NULL | enum('introduction', 'event') NOT NULL    | int(32) NOT NULL                  | enum('published', 'rejected') NOT NULL | mediumtext                         |
+| review_id        | content_type                              | content_id                        | result                                 | reason                             | created_at                                     | updated_at                                                   |
+| ---------------- | ----------------------------------------- | --------------------------------- | -------------------------------------- | ---------------------------------- | timestamp NOT NULL DEFAULT current_timestamp() | timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp() |
+| int(32) NOT NULL | enum('introduction', 'event') NOT NULL    | int(32) NOT NULL                  | enum('published', 'rejected') NOT NULL | mediumtext                         | データ入力日時                                 | データ更新日時                                               |
 | レビューID       | レビュー対象の種別（introduction, event） | レビュー対象の紹介文等/イベントID | 結果（published, rejected）            | 理由（`result=="rejected"`の場合） |
 
 
