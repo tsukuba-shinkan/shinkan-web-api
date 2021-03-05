@@ -3,6 +3,9 @@
  */
 import express from 'express'
 
+// Organizationの型定義
+// import { Organization } from '../types'
+
 /** v2.organization */
 const app = express()
 
