@@ -30,6 +30,11 @@
       "pre-commit": "lint-staged"
     }
   },
+  "dependencies": {
+    "@types/express": "^4.17.7",
+    "@types/node": "^14.6.0",
+    "express": "^4.17.1"
+  },
   "devDependencies": {
     "@types/jest": "^26.0.10",
     "@typescript-eslint/eslint-plugin": "^3.10.1",
