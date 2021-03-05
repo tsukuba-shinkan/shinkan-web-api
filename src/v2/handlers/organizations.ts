@@ -1,12 +1,12 @@
 /**
- * v1.Organization
+ * v2.Organization
  */
 import express from 'express'
 
-/** v1.organization */
+/** v2.organization */
 const app = express()
 
-// v1.organizations.list
+// v2.organizations.list
 app.get('/', (_, res) => {
   res.status(501).json({ message: 'to be implemented' })
 })
