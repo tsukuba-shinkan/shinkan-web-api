@@ -1,3 +1,6 @@
 import { Sequelize } from 'sequelize'
+import dotenv from 'dotenv'
 
-export const sequelize = new Sequelize()
+dotenv.config()
+
+export const sequelize = new Sequelize(process.env?.DB_URI || '')
