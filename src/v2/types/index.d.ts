@@ -1,6 +1,6 @@
 /**
  * v2.Organization
  */
-export interface Organization {
+export interface IOrganization {
   id: string
 }

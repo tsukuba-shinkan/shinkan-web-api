@@ -4,7 +4,10 @@
 import express from 'express'
 
 // Organizationの型定義
-// import { Organization } from '../types'
+// import { IOrganization } from '../types'
+
+// OrganizationのORM
+// import { Organization } from '../models/Organization'
 
 /** v2.organization */
 const app = express()
