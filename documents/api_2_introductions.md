@@ -12,7 +12,7 @@ interface Introduction {
   twitter: string; //Twitterスクリーンネーム（＠なし）
   instagram: string;
   mainImageURL: string;
-  otherImageURLs: [string]; //配列にしたい、書き方教えて（）
+  otherImageURLs: string[];
   (status: string;)
   (createdAt: datetime;)
   (updatedAt: datetime;)
