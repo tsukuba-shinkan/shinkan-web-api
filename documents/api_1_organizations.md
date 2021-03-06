@@ -57,14 +57,13 @@ body: `Organization` (個別団体情報)
 以下のフィールドは指定しても無視されます。
 
 * `id`
-* `created_at`
-* `updated_at`
+* `createdAt`
+* `updatedAt`
 
-// `created_at`、`updated_at`の表記法どうする？（`createdAt`など）
 
 ### 1-3-c. Response
 
-status: `204`
+status: `201`
 body: `Organization`
 
 ## 1-4. organizations.update
