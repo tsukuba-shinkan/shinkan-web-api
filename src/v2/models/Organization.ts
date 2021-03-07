@@ -10,7 +10,7 @@ type OrganizationCreationAttributes = Optional<OrganizationAttributes, 'id'>
 export class Organization
   extends Model<OrganizationAttributes, OrganizationCreationAttributes>
   implements IOrganization {
-  id!: string
+  id!: number
 }
 
 Organization.init(

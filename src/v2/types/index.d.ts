@@ -33,7 +33,7 @@ export interface IIntroduction {
 /**
  * v2.Events
  */
-export interface event {
+export interface IEvent {
   id: number
   title: string
   detail: string
@@ -48,7 +48,7 @@ export interface event {
 /**
  * v2.Reviews
  */
-export interface Review {
+export interface IReview {
   id: number
   type: string //"introduction" or "event"
   contentID: number
@@ -61,7 +61,7 @@ export interface Review {
 /**
  * v2.Pages
  */
-export interface Page {
+export interface IPage {
   id: number
   slug: string
   title: string
@@ -74,7 +74,7 @@ export interface Page {
 /**
  * v2.Announcements
  */
-export interface Announcement {
+export interface IAnnouncement {
   id: number
   title: string
   content: string
@@ -86,7 +86,7 @@ export interface Announcement {
 /**
  * v2.Users
  */
-export interface User {
+export interface IUser {
   userID: string
   name: string
   authority: string
@@ -99,7 +99,7 @@ export interface User {
 /**
  * v2.Memberships
  */
-export interface Membership {
+export interface IMembership {
   organizationID: number
   userID: string
   name: string
@@ -111,7 +111,7 @@ export interface Membership {
 /**
  * v2.Invitations
  */
-export interface Invitation {
+export interface IInvitation {
   invitationID: number
   email: string
   organizationID: string
