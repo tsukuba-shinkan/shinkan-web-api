@@ -11,6 +11,13 @@ export class Organization
   extends Model<OrganizationAttributes, OrganizationCreationAttributes>
   implements IOrganization {
   id!: number
+  name!: string
+  title!: string
+  mainImageURL!: string
+  organizationType!: string
+  activityType!: string
+  createdAt!: string
+  updatedAt!: string
 }
 
 Organization.init(
