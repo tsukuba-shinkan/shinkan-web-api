@@ -27,6 +27,7 @@ CREATE TABLE `announcements` (
   `announcement_title` varchar(64) NOT NULL,
   `announcement_content` mediumtext DEFAULT NULL,
   `is_published` bit(1) NOT NULL DEFAULT b'0',
+  `is_deleted` bit(1) NOT NULL DEFAULT b'0',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -43,6 +44,7 @@ CREATE TABLE `organizations` (
   `organization_type` enum('課外活動団体','一般学生団体','その他') NOT NULL,
   `activity_type` enum('体育系','芸術系','文化系','その他') NOT NULL,
   `is_admin` bit(1) NOT NULL DEFAULT b'0',
+  `is_deleted` bit(1) NOT NULL DEFAULT b'0',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -61,6 +63,7 @@ CREATE TABLE `organization_events` (
   `start` datetime NOT NULL,
   `end` datetime NOT NULL,
   `status` enum('draft','submitted','rejected','published') NOT NULL DEFAULT 'draft',
+  `is_deleted` bit(1) NOT NULL DEFAULT b'0',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -80,6 +83,7 @@ CREATE TABLE `organization_introductions` (
   `twitter` varchar(255) DEFAULT NULL,
   `instagram` varchar(255) DEFAULT NULL,
   `status` enum('draft','submitted','rejected','published') NOT NULL DEFAULT 'draft',
+  `is_deleted` bit(1) NOT NULL DEFAULT b'0',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -95,6 +99,7 @@ CREATE TABLE `organization_introductions_images` (
   `introduction_id` int(32) NOT NULL,
   `image_path` varchar(255) NOT NULL,
   `image_type` enum('main_image','other_image') NOT NULL,
+  `is_deleted` bit(1) NOT NULL DEFAULT b'0',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -109,6 +114,7 @@ CREATE TABLE `organization_introductions_youtube_links` (
   `youtube_link_id` int(32) NOT NULL,
   `introduction_id` int(32) NOT NULL,
   `link` varchar(255) NOT NULL,
+  `is_deleted` bit(1) NOT NULL DEFAULT b'0',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -122,6 +128,7 @@ CREATE TABLE `organization_introductions_youtube_links` (
 CREATE TABLE `organization_members` (
   `user_id` varchar(128) NOT NULL,
   `organization_id` int(32) NOT NULL,
+  `is_deleted` bit(1) NOT NULL DEFAULT b'0',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -136,6 +143,7 @@ CREATE TABLE `organization_member_invitations` (
   `invitation_id` int(32) NOT NULL,
   `email` varchar(255) NOT NULL,
   `organization_id` int(32) NOT NULL,
+  `is_deleted` bit(1) NOT NULL DEFAULT b'0',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -152,6 +160,7 @@ CREATE TABLE `pages` (
   `page_slug` varchar(64) NOT NULL,
   `page_content` mediumtext DEFAULT NULL,
   `is_published` bit(1) NOT NULL DEFAULT b'0',
+  `is_deleted` bit(1) NOT NULL DEFAULT b'0',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -168,6 +177,7 @@ CREATE TABLE `reviews` (
   `content_id` int(32) NOT NULL,
   `result` enum('published','rejected') NOT NULL,
   `reason` mediumtext DEFAULT NULL,
+  `is_deleted` bit(1) NOT NULL DEFAULT b'0',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -182,6 +192,7 @@ CREATE TABLE `users` (
   `user_id` varchar(128) NOT NULL,
   `name` varchar(64) NOT NULL,
   `authority` enum('general','reviewer','admin') NOT NULL DEFAULT 'general',
+  `is_deleted` bit(1) NOT NULL DEFAULT b'0',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
