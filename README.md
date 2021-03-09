@@ -7,29 +7,30 @@
 [![License](https://img.shields.io/github/license/tsukuba-shinkan/shinkan-web-api?style=flat-square)](/LICENSE)
 [![Imagine the future](https://img.shields.io/badge/Imagine%20the-future-%230bf?style=flat-square)](https://github.com/topics/imagine-the-future)
 
-筑波大学 新歓WebのAPIサーバ
+筑波大学 新歓 Web の API サーバ
 
-## Scripts
+## 開発
 
-**⚠ サーバの起動コードが実装されるまでは、起動を伴うコマンドはいずれも動作しません。**
-
-### 開発モードでの起動
+`.template.env`をコピーし、`.env`を作成して、`docker-compose`で起動します。
 
 ```sh
+docker-compose up --build
+```
+
+初回起動時に DB がセットアップされます。
+
+開発モードでは`src`以下を変更するとホットリロードされますが、それ以外の箇所（node_modules 含む）の変更は再実行（コンテナのリビルド）が必要です。
+
+### それ以外のスクリプトの使用
+
+手動でDBを構築し起動する場合は、ローカルマシンのNode.jsを使用して起動できます。DBの接続先は、`.env`の設定に依存します。
+
+```sh
+# ホットリロードを使用して起動する
 npm run dev
-```
 
-現時点ではホットリロードは未実装です。
-
-### ビルド
-
-```sh
-npm build
-```
-
-ビルド成果物の起動
-
-```sh
+# 本番環境用で使用する
+npm run build
 npm start
 ```
 
@@ -37,4 +38,12 @@ npm start
 
 ```sh
 npm test
+```
+
+## 本番環境での起動
+
+アプリケーション用Dockerイメージは、環境変数`SHINKAN_IS_DEV`の存在を判定して起動モードを切り替えます。これは、`docker-compose.override.yml`に記述されているため、以下のようにすると本番モードで起動させることができます。
+
+```
+docker-compose -f docker-compose.yml -f docker-compose.prod.yml up
 ```
