@@ -1,0 +1,13 @@
+# 開発環境用docker-compose設定
+# - docker-compose up で読み込まれる
+version: '3'
+services:
+  app:
+    volumes:
+      # ソースディレクトリをマッピングする
+      - ./src:/src
+    ports:
+      - "8080:8080"
+    environment: 
+      # 開発モードで起動する
+      SHINKAN_IS_DEV: 1
