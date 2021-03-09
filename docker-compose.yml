@@ -1,0 +1,19 @@
+version: '3'
+services:
+  db:
+    image: mysql:8.0
+    restart: always
+    volumes: 
+      - ./data/mysql:/var/lib/mysql
+      - ./initdb:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    ports:
+      - "33060:3306"
+  app:
+    build: .
+    environment:
+      DB_HOST: db:33060
+      DB_USER: root
+      DB_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      DB_NAME: shinkan_web
