@@ -1,27 +1,66 @@
-import { DataTypes, Model, Optional } from 'sequelize'
 import { IOrganization } from '../types'
-import { sequelize } from '.'
+// import { db } from './'
 
-// Sequelized Model Basics https://sequelize.org/master/manual/model-basics.html
-// Sequelized TypeScript Guide https://sequelize.org/master/manual/typescript.html
+export class Organization implements IOrganization {
+  private _id!: string
+  private _name!: string
+  createdAt!: Date
+  updatedAt!: Date
 
-type OrganizationAttributes = IOrganization
-type OrganizationCreationAttributes = Optional<OrganizationAttributes, 'id'>
-export class Organization
-  extends Model<OrganizationAttributes, OrganizationCreationAttributes>
-  implements IOrganization {
-  id!: string
-}
-
-Organization.init(
-  {
-    id: {
-      type: DataTypes.STRING(32),
-      primaryKey: true,
-    },
-  },
-  {
-    sequelize,
-    tableName: 'organizations',
+  constructor(props: IOrganization) {
+    this.set(props)
   }
-)
+
+  /**
+   * プロパティをオブジェクトから設定する
+   * @param props
+   */
+  private set(props: Partial<IOrganization>): void {
+    this.id = props.id || this.id
+    this.name = props.name || this.name
+    this.createdAt = props.createdAt || this.createdAt
+    this.updatedAt = props.updatedAt || this.updatedAt
+  }
+
+  get id(): string {
+    return this._id
+  }
+
+  set id(id: string) {
+    // To be implemented: Perform validation
+    this._id = id
+  }
+
+  get name(): string {
+    return this._name
+  }
+
+  set name(name: string) {
+    // To be implemented: Perform validation
+    this._name = name
+  }
+
+  /**
+   * Organizationレコードを新規作成する
+   * @param props
+   */
+  static async create(
+    props: Omit<IOrganization, 'id' | 'createdAt' | 'updatedAt'>
+  ): Promise<Organization> {
+    // To be implemented: Perform insert query (async)
+
+    return new Organization({
+      id: '__ID_FROM_DB__',
+      name: props.name,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    })
+  }
+
+  /**
+   * Organizaionレコードを更新する
+   */
+  async update(): Promise<void> {
+    // To be implemented: Perform update query (async)
+  }
+}
