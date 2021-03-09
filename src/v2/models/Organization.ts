@@ -1,4 +1,5 @@
 import { IOrganization } from '../types'
+// import { db } from './'
 
 export class Organization implements IOrganization {
   private _id!: string

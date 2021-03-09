@@ -1,6 +1,10 @@
-import { Sequelize } from 'sequelize'
+import mysql from 'mysql2'
 import dotenv from 'dotenv'
 
 dotenv.config()
 
-export const sequelize = new Sequelize(process.env?.DB_URI || '')
+export const db = mysql.createConnection({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  database: process.env.DB_NAME,
+})
