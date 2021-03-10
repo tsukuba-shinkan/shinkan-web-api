@@ -28,7 +28,7 @@ interface Introduction {
 | `offset` | Optional | `0` | `number` | 検索結果の先頭から無視する件数を指定します。 |
 | `limit` | Optional | `20` | `number` | 検索結果を取得する件数を指定します。 |
 | `organizationType` | Optional | `"all"` | `organizationTypes` | 検索したい団体の種別（課外活動団体・一般学生団体・その他）を指定します。
-| `activityType` | Optional | `"all"` | `activityTypes` | 検索したい団体の活動種別（体0育系・芸術系・文化系・その他）を指定します。
+| `activityType` | Optional | `"all"` | `activityTypes` | 検索したい団体の活動種別（体育系・芸術系・文化系・その他）を指定します。
 
 ### 2-1-b. Responce
 body: `Introduction[]`
