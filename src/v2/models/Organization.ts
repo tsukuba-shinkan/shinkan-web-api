@@ -4,6 +4,10 @@ import { IOrganization } from '../types'
 export class Organization implements IOrganization {
   private _id!: string
   private _name!: string
+  title!: string
+  mainImageURL!: string
+  organizationType!: string
+  activityType!: string
   createdAt!: Date
   updatedAt!: Date
 
@@ -52,6 +56,10 @@ export class Organization implements IOrganization {
     return new Organization({
       id: '__ID_FROM_DB__',
       name: props.name,
+      title: props.title,
+      mainImageURL: props.mainImageURL,
+      organizationType: props.organizationType,
+      activityType: props.activityType,
       createdAt: new Date(),
       updatedAt: new Date(),
     })
