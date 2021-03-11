@@ -16,5 +16,24 @@ const app = express()
 app.get('/', (_, res) => {
   res.status(501).json({ message: 'to be implemented' })
 })
+// v2.announcements.get
+app.get('/:id', (_, res) => {
+  res.status(501).json({ message: 'to be implemented' })
+})
+
+// v2.announcements.create
+app.post('/', (_, res) => {
+  res.status(501).json({ message: 'to be implemented' })
+})
+
+// v2.announcements.update
+app.put('/:id', (_, res) => {
+  res.status(501).json({ message: 'to be implemented' })
+})
+
+// v2.announcements.delete
+app.delete('/:id', (_, res) => {
+  res.status(501).json({ message: 'to be implemented' })
+})
 
 export default app

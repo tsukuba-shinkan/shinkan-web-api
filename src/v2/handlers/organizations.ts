@@ -17,4 +17,24 @@ app.get('/', (_, res) => {
   res.status(501).json({ message: 'to be implemented' })
 })
 
+// v2.organizations.get
+app.get('/:id', (_, res) => {
+  res.status(501).json({ message: 'to be implemented' })
+})
+
+// v2.organizations.create
+app.post('/', (_, res) => {
+  res.status(501).json({ message: 'to be implemented' })
+})
+
+// v2.organizations.update
+app.put('/:id', (_, res) => {
+  res.status(501).json({ message: 'to be implemented' })
+})
+
+// v2.organizations.delete
+app.delete('/:id', (_, res) => {
+  res.status(501).json({ message: 'to be implemented' })
+})
+
 export default app

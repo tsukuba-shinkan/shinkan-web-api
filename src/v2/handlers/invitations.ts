@@ -16,5 +16,24 @@ const app = express()
 app.get('/', (_, res) => {
   res.status(501).json({ message: 'to be implemented' })
 })
+// v2.invitations.get
+app.get('/:id', (_, res) => {
+  res.status(501).json({ message: 'to be implemented' })
+})
+
+// v2.invitations.create
+app.post('/', (_, res) => {
+  res.status(501).json({ message: 'to be implemented' })
+})
+
+// v2.invitations.update
+// app.put('/:id', (_, res) => {
+//   res.status(501).json({ message: 'to be implemented' })
+// })
+
+// v2.invitations.delete
+app.delete('/:id', (_, res) => {
+  res.status(501).json({ message: 'to be implemented' })
+})
 
 export default app
