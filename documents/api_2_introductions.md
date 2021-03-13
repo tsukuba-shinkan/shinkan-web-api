@@ -13,6 +13,7 @@ interface Introduction {
   instagram: string;
   mainImageURL: string;
   otherImageURLs: string[];
+  youtubeLinks: string[]
   status: string;
   createdAt: string; 
   updatedAt: string;

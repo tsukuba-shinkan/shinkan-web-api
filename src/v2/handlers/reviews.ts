@@ -1,38 +1,37 @@
 /**
- * v2.Organization
+ * v2.Review
  */
 import express from 'express'
 
-// Organizationの型定義
-// import { IOrganization } from '../types'
+// Reviewの型定義
+// import { IReview } from '../types'
 
-// OrganizationのORM
-// import { Organization } from '../models/Organization'
+// ReviewのORM
+// import { Review } from '../models/Review'
 
-/** v2.organization */
+/** v2.review */
 const app = express()
 
-// v2.organizations.list
+// v2.reviews.list
 app.get('/', (_, res) => {
   res.status(501).json({ message: 'to be implemented' })
 })
-
-// v2.organizations.get
+// v2.reviews.get
 app.get('/:id', (_, res) => {
   res.status(501).json({ message: 'to be implemented' })
 })
 
-// v2.organizations.create
+// v2.reviews.create
 app.post('/', (_, res) => {
   res.status(501).json({ message: 'to be implemented' })
 })
 
-// v2.organizations.update
+// v2.reviews.update
 app.put('/:id', (_, res) => {
   res.status(501).json({ message: 'to be implemented' })
 })
 
-// v2.organizations.delete
+// v2.reviews.delete
 app.delete('/:id', (_, res) => {
   res.status(501).json({ message: 'to be implemented' })
 })

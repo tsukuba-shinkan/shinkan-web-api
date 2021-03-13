@@ -1,38 +1,37 @@
 /**
- * v2.Organization
+ * v2.Page
  */
 import express from 'express'
 
-// Organizationの型定義
-// import { IOrganization } from '../types'
+// Pageの型定義
+// import { IPage } from '../types'
 
-// OrganizationのORM
-// import { Organization } from '../models/Organization'
+// PageのORM
+// import { Page } from '../models/Page'
 
-/** v2.organization */
+/** v2.page */
 const app = express()
 
-// v2.organizations.list
+// v2.pages.list
 app.get('/', (_, res) => {
   res.status(501).json({ message: 'to be implemented' })
 })
-
-// v2.organizations.get
+// v2.pages.get
 app.get('/:id', (_, res) => {
   res.status(501).json({ message: 'to be implemented' })
 })
 
-// v2.organizations.create
+// v2.pages.create
 app.post('/', (_, res) => {
   res.status(501).json({ message: 'to be implemented' })
 })
 
-// v2.organizations.update
+// v2.pages.update
 app.put('/:id', (_, res) => {
   res.status(501).json({ message: 'to be implemented' })
 })
 
-// v2.organizations.delete
+// v2.pages.delete
 app.delete('/:id', (_, res) => {
   res.status(501).json({ message: 'to be implemented' })
 })

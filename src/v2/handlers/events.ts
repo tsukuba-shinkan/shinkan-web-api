@@ -1,40 +1,38 @@
 /**
- * v2.Organization
+ * v2.Event
  */
 import express from 'express'
 
-// Organizationの型定義
-// import { IOrganization } from '../types'
+// Eventの型定義
+// import { IEvent } from '../types'
 
-// OrganizationのORM
-// import { Organization } from '../models/Organization'
+// EventのORM
+// import { Event } from '../models/Event'
 
-/** v2.organization */
+/** v2.event */
 const app = express()
 
-// v2.organizations.list
+// v2.events.list
 app.get('/', (_, res) => {
   res.status(501).json({ message: 'to be implemented' })
 })
-
-// v2.organizations.get
+// v2.events.get
 app.get('/:id', (_, res) => {
   res.status(501).json({ message: 'to be implemented' })
 })
 
-// v2.organizations.create
+// v2.events.create
 app.post('/', (_, res) => {
   res.status(501).json({ message: 'to be implemented' })
 })
 
-// v2.organizations.update
+// v2.events.update
 app.put('/:id', (_, res) => {
   res.status(501).json({ message: 'to be implemented' })
 })
 
-// v2.organizations.delete
+// v2.events.delete
 app.delete('/:id', (_, res) => {
   res.status(501).json({ message: 'to be implemented' })
 })
-
 export default app
