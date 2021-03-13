@@ -1,8 +1,18 @@
 import { RequestHandler } from 'express'
+import admin from 'firebase-admin'
+export const authMiddleware: RequestHandler = (req, res, next) => {
+  ;(async () => {
+    const token = req.headers.authorization
+    if (!token) {
+      throw new Error()
+    }
 
-export const authMiddleware: RequestHandler = (req, _res, next) => {
-  // To be implemented
-  req.auth = null
+    await admin.auth().verifyIdToken(token)
+  })()
+    .then(next)
+    .catch(e => {
+      console.log(e)
 
-  next()
+      res.status(403).send('Invalid token')
+    })
 }
